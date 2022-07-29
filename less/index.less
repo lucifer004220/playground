@@ -1,0 +1,128 @@
+@import './base.less';
+@import './normalize.less';
+
+@rootsize:37.5rem;
+body{
+    background-color: #f0f0f0;
+}
+
+// 主体内容
+.main{
+    margin-bottom: (60 / @rootsize);
+    // banner区域
+    .banner{
+        height:(160 / @rootsize);
+    }
+
+    .title{
+        height: (40 / @rootsize);
+        line-height: (40 / @rootsize);
+        padding-left: (15 / @rootsize);
+        h5{
+            font-size: (14 / @rootsize);
+            color: #3C3C3C;
+            font-weight: normal;
+        }
+    }
+
+    // 活动区域
+    .item{
+        margin-bottom: (10 / @rootsize);
+
+        // 图片区域
+        .pic{
+            position: relative;
+            height: (160 / @rootsize);
+
+        //字体图标 
+            i{
+                position: absolute;
+                top: (15 / @rootsize);
+                right: (18 / @rootsize);
+                font-size: (24 / @rootsize);
+                color: #fff;
+            }
+
+            // 活动状态
+            .active {
+                position: absolute;
+                top: (-4 / @rootsize);
+                left: (15 / @rootsize);
+                width: (68 / @rootsize);
+                height: (29 / @rootsize);
+                background-image: url(../images/status_active.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                font-size: (12 / @rootsize);
+                text-align: center;
+                line-height: (25 / @rootsize);
+                color: #fff;
+
+                &.off{
+                    background-image: url(../images/status_default.png);
+                }
+            }
+        }
+
+        // 文字区域
+        .txt{
+            padding: (10 / @rootsize) (15 / @rootsize);
+            background-color: #fff;
+
+            .top{
+                display: flex;
+                justify-content: space-between;
+
+                h5{
+                    font-size: (15 / @rootsize);
+                    width: (295 / @rootsize);
+                    color: #3C3C3C;
+                    font-weight: normal;
+                }
+                p{
+                    font-size: (15 / @rootsize);
+                    color: #FE6249;
+                }
+            }
+
+            .bottom{
+                display: flex;
+                margin-top: (10 / @rootsize);
+                p{
+                    margin-right: (15 / @rootsize);
+                    font-size: (11 / @rootsize);
+                    color: #b4b4b4;
+
+                    i{
+                        font-size: (11 / @rootsize)
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+
+    width: 100%;
+    height:(50 / @rootsize);
+    background-color: #FECA49;
+    a{
+        font-size:(11 / @rootsize);
+        color: #D78B09;
+        .iconfont{
+            font-size: (24 / @rootsize);
+        }
+        &.current{
+            color: #fff;
+        }
+    }
+}
